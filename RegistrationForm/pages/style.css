@@ -1,6 +1,6 @@
 .home-section{
-    width: 100%;
-    background-image: url("https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    width:  100%;
+    background: url("https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 .card{
     height: 100vh;
@@ -30,7 +30,7 @@
     align-items: center;
     padding-left: 30px;
   }
-  
+
   .title::before,.title::after {
     position: absolute;
     content: "";
@@ -55,7 +55,7 @@
   
   .message, .signin {
     color: rgba(88, 87, 87, 0.822);
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .signin {
