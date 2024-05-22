@@ -1,9 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .home-section{
     width:  100%;
-    background: url("https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100vh;
+    background: #f46b45;  
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45); 
+    background: linear-gradient(to right, #eea849, #f46b45); 
 }
 .card{
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
