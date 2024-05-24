@@ -6,9 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            width:  100%;
+            height: 100vh;
+            background: #f46b45;  
+            background: -webkit-linear-gradient(to right, #eea849, #f46b45); 
+            background: linear-gradient(to right, #eea849, #f46b45); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: wheat;
+            border-radius: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
     <div class="container">
-        <h1>Registration Error</h1>
-        <p>There was an error during registration. Please try again</p>
+        <div class="card">
+            <h1>Registration Error</h1>
+            <p>There was an error during registration. Please try again</p>
+        </div>
     </div>
 </body>
 </html>
