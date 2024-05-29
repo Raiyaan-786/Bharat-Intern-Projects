@@ -2,22 +2,42 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 
-dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL);
-
-const db = mongoose.connection
-db.on("error", ()=> console.log("Error in connecting to the Database"))
-db.onjce("open", ()=> console.log("Connected to Database"));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+mongoose.connect("mongodb://localhost:27017/MoneyTracker");
+const db = mongoose.connection
+db.on("error", ()=> console.log("Error in connecting to the Database"))
+db.onjce("open", ()=> console.log("Connected to Database"));
+
 const port = process.env.PORT || 3000 ;
 
-app.listen(port, () => {
-    console.log(`Server is Running on Port ${port}`);
+app.post("/add",(req,res) => {
+    const category_select  = req.body.category_select
+    const input_amount  = req.body.input_amount
+    const info  = req.body.info
+    const input_date  = req.body.input_date
+
+    const data = {
+        "Category" : category_select,
+        "Amount": input_amount,
+        "Info": info,
+        "Date": input_date
+    }
+    db.collection("users").insertOne(data, (err,collection) => {
+        if(err){
+            throw err ;
+        }
+        console.log("Record inserted successfully");
+    })
+})
+
+app.get("/" ,(req,res)=> {
+    
 })
