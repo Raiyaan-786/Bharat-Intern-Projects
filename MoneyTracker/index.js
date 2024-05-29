@@ -9,6 +9,9 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL);
 
+const db = mongoose.connection
+db.on("error", ()=> console.log("Error in connecting to the Database"))
+db.onjce("open", ()=> console.log("Connected to Database"));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
