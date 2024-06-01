@@ -31,7 +31,6 @@ app.post("/add", (req,res) =>{
             throw err;
         }
         console.log("Record Inserted Successfully")
-
     })
 })
 app.get("/",(req,res) =>{

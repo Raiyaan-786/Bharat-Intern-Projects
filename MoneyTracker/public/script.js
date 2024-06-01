@@ -1,4 +1,3 @@
-
 let expenses =[]
 let totalAmount = 0;
 const categorySelect = document.getElementById('category_select')
