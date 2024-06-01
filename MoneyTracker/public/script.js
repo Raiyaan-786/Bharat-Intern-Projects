@@ -75,8 +75,9 @@ for(const expense of expenses){
         totalAmount -= amount ;
     }
     totalAmountCell.textContent = totalAmount;
-    const newRow = newRow.insertRow(); 
-    const categoryCell = newRow.insertCell();
+    const newRow = expenseTableBody.insertRow(); 
+
+    const categoryCell = expenseTableBody.insertCell();
     const AmountCell = newRow.insertCell();
     const infoCell = newRow.insertCell();
     const dateCell = newRow.insertCell();
