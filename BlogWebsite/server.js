@@ -19,7 +19,7 @@ app.get('/' , (req,res) => {
             description: 'Test Article 2 Description'
         },
     ]
-    res.render('index',{articles:articles});
+    res.render('articles/index',{articles:articles});
 })
 
 app.use('/articles' , articleRouter);
