@@ -1,8 +1,10 @@
 const express = require('express');
 const articleRouter = require('./routes/articles')
 const mongoose = require('mongoose');
-
+// const Article = require('./')
 const app = express();
+
+mongoose.connect('mongodb://localhost/BlogWebsite');
 
 app.set('view engine', 'ejs');
 
