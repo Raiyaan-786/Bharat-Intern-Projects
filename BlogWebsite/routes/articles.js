@@ -11,6 +11,11 @@ router.get('/:slug', async (req, res) => {
     res.render('articles/show', {article: article});
 })
 
+router.delete('/:id' , async (req,res) => {
+    await Article.findByIdAndDelete(req.params.id);
+    res.redirect('/');
+})
+
 router.post('/', async (req,res) => {
     let article = new Article({
         title: req.body.title,
